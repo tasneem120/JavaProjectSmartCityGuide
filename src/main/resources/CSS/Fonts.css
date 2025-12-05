@@ -1,0 +1,41 @@
+@font-face {
+    font-family: "Raleway-Black";
+    src: url("../fonts/Raleway-Black.ttf");
+}
+
+.labelLogo {
+    -fx-font-family: "Raleway-Black";
+    -fx-font-size: 22px;
+}
+@font-face {
+    font-family: "SourceSansPro-Bold";
+    src: url("../fonts/SourceSansPro-Bold.otf");
+}
+
+.welcomText {
+    -fx-font-family: "SourceSansPro-Bold";
+    -fx-font-size: 16px;
+}
+
+@font-face {
+    font-family: "SourceSansPro-Black";
+    src: url("../fonts/SourceSansPro-Bold.otf");
+}
+
+.buttonWelcom{
+    -fx-font-family: "SourceSansPro-Black";
+    -fx-font-size: 16px;
+    -fx-background-radius: 18;
+}
+
+
+.tip-label {
+    -fx-text-fill: #D3751E; /* برتقالي */
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+}
+.visitor-label {
+    -fx-text-fill: #888888; /* رمادي فاتح */
+    -fx-font-style: italic;
+    -fx-font-size: 12px;
+}
