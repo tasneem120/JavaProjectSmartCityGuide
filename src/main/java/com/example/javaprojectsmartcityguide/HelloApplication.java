@@ -6,6 +6,9 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class HelloApplication extends Application {
     @Override
@@ -18,6 +21,17 @@ public class HelloApplication extends Application {
     }
 
     public static void main(String[] args) {
-        launch();
+        String url = "jdbc:mysql://localhost:3306/smartcityguide";
+        String username = "tasnim";
+        String password = "123";
+
+        try {
+            Connection conn = DriverManager.getConnection(url, username, password);
+            System.out.println("Connection successful!");
+            conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
     }
 }
