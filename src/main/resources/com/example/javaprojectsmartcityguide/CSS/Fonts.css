@@ -30,12 +30,38 @@
 
 
 .tip-label {
-    -fx-text-fill: #D3751E; /* برتقالي */
+    -fx-text-fill: #D3751E;
     -fx-font-weight: bold;
     -fx-font-size: 13px;
 }
 .visitor-label {
-    -fx-text-fill: #888888; /* رمادي فاتح */
+    -fx-text-fill: #888888;
     -fx-font-style: italic;
     -fx-font-size: 12px;
+}
+
+
+.bgLogin {
+    -fx-background-image: url("../Images/loginBackground (2).jpg");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+}
+.userPass {
+    -fx-font-family: "SourceSansPro-Bold";
+    -fx-font-size: 15px;
+}
+.TextAdmin {
+    -fx-font-family: "SourceSansPro-Bold";
+    -fx-font-size: 13px;
+}
+.error-label {
+    -fx-text-fill: #7a1f1a;
+    -fx-background-color: linear-gradient(#fff0f0, #fdecec);
+    -fx-padding: 5 10 5 10;
+    -fx-border-color: #f2c6c6;
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-font-size: 10pt;
+    -fx-effect: none;
 }
