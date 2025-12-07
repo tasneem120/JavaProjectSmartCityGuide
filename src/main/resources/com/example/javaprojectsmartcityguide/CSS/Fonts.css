@@ -26,8 +26,12 @@
     -fx-font-family: "SourceSansPro-Black";
     -fx-font-size: 16px;
     -fx-background-radius: 18;
-}
 
+        -fx-cursor: hand;
+}
+.buttonWelcom:pressed {
+    -fx-cursor: closed-hand;
+}
 
 .tip-label {
     -fx-text-fill: #D3751E;
@@ -35,16 +39,8 @@
     -fx-font-size: 13px;
 }
 .visitor-label {
-    -fx-text-fill: #888888;
     -fx-font-style: italic;
     -fx-font-size: 12px;
-}
-
-
-.bgLogin {
-    -fx-background-image: url("../Images/loginBackground (2).jpg");
-    -fx-background-size: cover;
-    -fx-background-repeat: no-repeat;
 }
 .userPass {
     -fx-font-family: "SourceSansPro-Bold";
@@ -52,7 +48,7 @@
 }
 .TextAdmin {
     -fx-font-family: "SourceSansPro-Bold";
-    -fx-font-size: 13px;
+    -fx-font-size: 14px;
 }
 .error-label {
     -fx-text-fill: #7a1f1a;
