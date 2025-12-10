@@ -75,7 +75,7 @@ public class ViewVisitor implements Initializable {
 
                 FXMLLoader fxmlLoader = new FXMLLoader(
                         getClass().getResource(
-                                "resources/com/example/javaprojectsmartcityguide/items.fxml"
+                                "/com/example/javaprojectsmartcityguide/items.fxml"
                         )
                 );
 
@@ -102,7 +102,7 @@ public class ViewVisitor implements Initializable {
         try {
             FXMLLoader loader = new FXMLLoader(
                     getClass().getResource(
-                            "resources/com/example/javaprojectsmartcityguide/PlacesCard.fxml"
+                            "/com/example/javaprojectsmartcityguide/PlacesCard.fxml"
                     )
             );
 
