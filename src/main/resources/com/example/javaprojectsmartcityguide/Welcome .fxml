@@ -9,25 +9,25 @@
 
 <AnchorPane prefHeight="530.0" prefWidth="750.0" style="-fx-background-color: #E5E5E5;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaprojectsmartcityguide.LoginController">
    <children>
-      <Label alignment="CENTER" layoutX="330.0" layoutY="45.0" prefHeight="68.0" prefWidth="184.0" style="-fx-background-color: #CCCCCC;" styleClass="labelLogo" stylesheets="@CSS/Fonts.css" text=" City Explorer" textAlignment="JUSTIFY" textFill="#143261">
+      <Label layoutX="330.0" layoutY="-2.0" prefHeight="95.0" prefWidth="419.0" style="-fx-background-color: #CCCCCC;" styleClass="labelLogo" stylesheets="@CSS/Fonts.css" text="  City Explorer" textAlignment="JUSTIFY" textFill="#143261">
          <font>
             <Font name="Roboto Black" size="20.0" />
          </font>
       </Label>
-      <ImageView fitHeight="68.0" fitWidth="76.0" layoutX="263.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="95.0" fitWidth="102.0" layoutX="250.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/logo.png" />
          </image>
       </ImageView>
-      <Label layoutX="97.0" layoutY="151.0" maxWidth="554.0" minWidth="379.0" prefHeight="157.0" prefWidth="554.0" styleClass="welcomText" stylesheets="@CSS/Fonts.css" text="Explore top hotels, restaurants, and attractions in your city all in one place. Please choose your access type below. Log in as Admin to manage data and access advanced features, or continue as a Visitor to simply browse and explore. Enjoy your journey!" textAlignment="CENTER" textFill="#143261" wrapText="true" />
-      <Label layoutX="266.0" layoutY="153.0" styleClass="welcomText" stylesheets="@CSS/Fonts.css" text="Welcome to City Explorer!" textFill="#143261" />
-      <Button layoutX="187.0" layoutY="328.0" mnemonicParsing="false" onAction="#openAdminLogin" prefHeight="43.0" prefWidth="184.0" style="-fx-background-color: #143261;" styleClass="buttonWelcom" stylesheets="@CSS/Fonts.css" text="Admin" textFill="WHITE"> <!-- ربط الزرار بالميثود -->
+      <Label layoutX="103.0" layoutY="144.0" maxWidth="554.0" minWidth="379.0" prefHeight="157.0" prefWidth="554.0" styleClass="welcomText" stylesheets="@CSS/Fonts.css" text="Explore top hotels, restaurants, and attractions in your city all in one place. Please choose your access type below. Log in as Admin to manage data and access advanced features, or continue as a Visitor to simply browse and explore. Enjoy your journey!" textAlignment="CENTER" textFill="#143261" wrapText="true" />
+      <Label layoutX="272.0" layoutY="146.0" styleClass="welcomText" stylesheets="@CSS/Fonts.css" text="Welcome to City Explorer!" textFill="#143261" />
+      <Button layoutX="187.0" layoutY="321.0" mnemonicParsing="false" onAction="#openAdminLogin" prefHeight="43.0" prefWidth="184.0" style="-fx-background-color: #143261;" styleClass="buttonWelcom" stylesheets="@CSS/Fonts.css" text="Admin" textFill="WHITE"> <!-- ربط الزرار بالميثود -->
          <font>
             <Font name="Banyeh" size="12.0" />
          </font>
       </Button>
 
-      <Button layoutX="404.0" layoutY="328.0" mnemonicParsing="false" onAction="#openAdminLogin" prefHeight="43.0" prefWidth="184.0" style="-fx-background-color: #143261;" styleClass="buttonWelcom" stylesheets="@CSS/Fonts.css" text="Visitor" textFill="WHITE"> <!-- ربط الزرار بالميثود -->
+      <Button layoutX="404.0" layoutY="321.0" mnemonicParsing="false" onAction="#openAdminLogin" prefHeight="43.0" prefWidth="184.0" style="-fx-background-color: #143261;" styleClass="buttonWelcom" stylesheets="@CSS/Fonts.css" text="Visitor" textFill="WHITE"> <!-- ربط الزرار بالميثود -->
          <font>
             <Font name="Banyeh" size="12.0" />
          </font>
@@ -39,10 +39,15 @@
          <font>
             <Font name="Andalus" size="12.0" />
          </font></Label>
-      <Button id="reviewsBtn" fx:id="reviewsBtn" layoutX="295.0" layoutY="394.0" mnemonicParsing="false" onAction="#openReviews" prefHeight="43.0" prefWidth="184.0" style="-fx-background-color: #143261;" styleClass="buttonWelcom" stylesheets="@CSS/Fonts.css" text="Review" textFill="WHITE">
+      <Button id="reviewsBtn" fx:id="reviewsBtn" layoutX="295.0" layoutY="387.0" mnemonicParsing="false" onAction="#openReviews" prefHeight="43.0" prefWidth="184.0" style="-fx-background-color: #143261;" styleClass="buttonWelcom" stylesheets="@CSS/Fonts.css" text="Review" textFill="WHITE">
          <font>
             <Font name="Banyeh" size="12.0" />
          </font>
       </Button>
+      <Label alignment="CENTER" layoutX="-168.0" layoutY="-2.0" prefHeight="95.0" prefWidth="419.0" style="-fx-background-color: #CCCCCC;" styleClass="labelLogo" stylesheets="@CSS/Fonts.css" textFill="#143261">
+         <font>
+            <Font name="Roboto Black" size="20.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
