@@ -43,14 +43,14 @@
    <bottom>
       <VBox prefHeight="192.0" prefWidth="694.0" style="-fx-spacing: 5;" BorderPane.alignment="CENTER">
          <children>
-            <Label text="Add your reviews">
+            <Label text="Add your reviews" textFill="#143261">
                <font>
                   <Font name="Bodoni MT" size="22.0" />
                </font>
             </Label>
             <HBox prefHeight="20.0" prefWidth="696.0" style="-fx-spacing: 10;">
                <children>
-                  <Label text="User name">
+                  <Label text="User name" textFill="#143261">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -60,7 +60,7 @@
             </HBox>
             <HBox prefHeight="20.0" prefWidth="696.0" style="-fx-spacing: 6;">
                <children>
-                  <Label style="-fx-line-spacing: 10;" text="Place name">
+                  <Label style="-fx-line-spacing: 10;" text="Place name" textFill="#143261">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -70,7 +70,7 @@
             </HBox>
             <HBox prefHeight="20.0" prefWidth="696.0" style="-fx-spacing: 30;">
                <children>
-                  <Label text="Rateing">
+                  <Label text="Rateing" textFill="#143261">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -80,7 +80,7 @@
             </HBox>
             <HBox prefHeight="20.0" prefWidth="696.0" style="-fx-spacing: 15;">
                <children>
-                  <Label text="Comment">
+                  <Label text="Comment" textFill="#143261">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -90,8 +90,8 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-spacing: 20;">
                <children>
-                  <Button id="btnSubmitReview" mnemonicParsing="false" onAction="#handleSubmit" text="Submit" />
-                  <Button id="backBtn" mnemonicParsing="false" onAction="#backToWelcome" text=" Back to Welcome" />
+                  <Button id="btnSubmitReview" mnemonicParsing="false" onAction="#handleSubmit" text="Submit" textFill="WHITE" />
+                  <Button id="backBtn" mnemonicParsing="false" onAction="#backToWelcome" text="Home" />
                </children>
             </HBox>
          </children>

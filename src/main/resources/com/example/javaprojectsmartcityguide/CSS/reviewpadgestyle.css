@@ -59,8 +59,8 @@
 
 /* Buttons */
 .button {
-    -fx-background-color: #F4B41A;
-    -fx-text-fill: #153A6B;
+    -fx-background-color:  #143261;
+    -fx-text-fill: #ffffff;
     -fx-background-radius: 20;
     -fx-font-weight: bold;
     -fx-padding: 8 20; /* vertical & horizontal padding */
