@@ -65,7 +65,7 @@ public class LoginController {
             ResultSet rs = ps.executeQuery();
             if(rs.next()) {
                 String role = rs.getString("role");
-                if(role.equals("Admin")) openScene("admin.fxml");//هنا صفحه الادمن الي هتفتح لما تتحط
+                if(role.equals("Admin")) openScene("admin_view.fxml");//هنا صفحه الادمن الي هتفتح لما تتحط
                 else {
                     errorLabel.setText("You do not have Admin access!");
                     errorLabel.setVisible(true);

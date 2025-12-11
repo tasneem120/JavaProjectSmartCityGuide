@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="752.0" style="-fx-background-color: #E5E5E5;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaprojectsmartcityguide.LoginController">
+<AnchorPane prefHeight="530.0" prefWidth="750.0" style="-fx-background-color: #E5E5E5;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaprojectsmartcityguide.LoginController">
    <children>
-      <Label alignment="CENTER" layoutX="330.0" layoutY="45.0" prefHeight="68.0" prefWidth="184.0" style="-fx-background-color: #CCCCCC;" styleClass="labelLogo" stylesheets="@CSS/Fonts.css" text="Smart City Guide " textAlignment="JUSTIFY" textFill="#143261">
+      <Label alignment="CENTER" layoutX="330.0" layoutY="45.0" prefHeight="68.0" prefWidth="184.0" style="-fx-background-color: #CCCCCC;" styleClass="labelLogo" stylesheets="@CSS/Fonts.css" text=" City Explorer" textAlignment="JUSTIFY" textFill="#143261">
          <font>
             <Font name="Roboto Black" size="20.0" />
          </font>
@@ -20,26 +20,26 @@
          </image>
       </ImageView>
       <Label layoutX="97.0" layoutY="151.0" maxWidth="554.0" minWidth="379.0" prefHeight="157.0" prefWidth="554.0" styleClass="welcomText" stylesheets="@CSS/Fonts.css" text="Explore top hotels, restaurants, and attractions in your city all in one place. Please choose your access type below. Log in as Admin to manage data and access advanced features, or continue as a Visitor to simply browse and explore. Enjoy your journey!" textAlignment="CENTER" textFill="#143261" wrapText="true" />
-      <Label layoutX="266.0" layoutY="153.0" styleClass="welcomText" stylesheets="@CSS/Fonts.css" text="Welcome to Smart City Guide!" textFill="#143261" />
-      <Button layoutX="296.0" layoutY="313.0" mnemonicParsing="false" onAction="#openAdminLogin" prefHeight="43.0" prefWidth="184.0" style="-fx-background-color: #143261;" styleClass="buttonWelcom" stylesheets="@CSS/Fonts.css" text="Admin" textFill="WHITE"> <!-- ربط الزرار بالميثود -->
+      <Label layoutX="266.0" layoutY="153.0" styleClass="welcomText" stylesheets="@CSS/Fonts.css" text="Welcome to City Explorer!" textFill="#143261" />
+      <Button layoutX="187.0" layoutY="328.0" mnemonicParsing="false" onAction="#openAdminLogin" prefHeight="43.0" prefWidth="184.0" style="-fx-background-color: #143261;" styleClass="buttonWelcom" stylesheets="@CSS/Fonts.css" text="Admin" textFill="WHITE"> <!-- ربط الزرار بالميثود -->
          <font>
             <Font name="Banyeh" size="12.0" />
          </font>
       </Button>
 
-      <Button layoutX="297.0" layoutY="382.0" mnemonicParsing="false" onAction="#openAdminLogin" prefHeight="43.0" prefWidth="184.0" style="-fx-background-color: #143261;" styleClass="buttonWelcom" stylesheets="@CSS/Fonts.css" text="Visitor" textFill="WHITE"> <!-- ربط الزرار بالميثود -->
+      <Button layoutX="404.0" layoutY="328.0" mnemonicParsing="false" onAction="#openAdminLogin" prefHeight="43.0" prefWidth="184.0" style="-fx-background-color: #143261;" styleClass="buttonWelcom" stylesheets="@CSS/Fonts.css" text="Visitor" textFill="WHITE"> <!-- ربط الزرار بالميثود -->
          <font>
             <Font name="Banyeh" size="12.0" />
          </font>
       </Button>
 
 
-      <Label layoutX="180.0" layoutY="505.0" prefHeight="26.0" prefWidth="438.0" styleClass="tip-label" stylesheets="@CSS/Fonts.css" text="Tip: For full access and data management features, log in as an Admin" textFill="#3d4337" />
-      <Label layoutX="203.0" layoutY="532.0" prefHeight="43.0" prefWidth="372.0" styleClass="visitor-label" stylesheets="@CSS/Fonts.css" text="If you just want to discover the city, feel free to continue as a Visitor." textFill="#143261">
+      <Label layoutX="180.0" layoutY="464.0" prefHeight="26.0" prefWidth="438.0" styleClass="tip-label" stylesheets="@CSS/Fonts.css" text="Tip: For full access and data management features, log in as an Admin" textFill="#3d4337" />
+      <Label layoutX="203.0" layoutY="481.0" prefHeight="43.0" prefWidth="372.0" styleClass="visitor-label" stylesheets="@CSS/Fonts.css" text="If you just want to discover the city, feel free to continue as a Visitor." textFill="#143261">
          <font>
             <Font name="Andalus" size="12.0" />
          </font></Label>
-      <Button id="reviewsBtn" fx:id="reviewsBtn" layoutX="297.0" layoutY="454.0" mnemonicParsing="false" onAction="#openReviews" prefHeight="43.0" prefWidth="184.0" style="-fx-background-color: #143261;" styleClass="buttonWelcom" stylesheets="@CSS/Fonts.css" text="Review" textFill="WHITE">
+      <Button id="reviewsBtn" fx:id="reviewsBtn" layoutX="295.0" layoutY="394.0" mnemonicParsing="false" onAction="#openReviews" prefHeight="43.0" prefWidth="184.0" style="-fx-background-color: #143261;" styleClass="buttonWelcom" stylesheets="@CSS/Fonts.css" text="Review" textFill="WHITE">
          <font>
             <Font name="Banyeh" size="12.0" />
          </font>
