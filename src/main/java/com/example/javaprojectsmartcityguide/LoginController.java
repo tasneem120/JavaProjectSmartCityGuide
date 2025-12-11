@@ -20,6 +20,17 @@ public class LoginController {
         Stage stage = (Stage) ((Button)event.getSource()).getScene().getWindow();
         stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("login .fxml"))));
     }
+    //link with review padge
+    @FXML private Button reviewsBtn;
+
+    @FXML private void openReviews(ActionEvent event) {
+        try {
+            Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("reviews.fxml"))));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }//end here
     @FXML
     void backWelcome(ActionEvent event) throws IOException {
         Stage stage = (Stage) ((Button)event.getSource()).getScene().getWindow();

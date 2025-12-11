@@ -1,0 +1,17 @@
+CREATE TABLE reviews (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    user_name VARCHAR(100) NOT NULL,
+    place_name VARCHAR(100) NOT NULL,
+    rating INT(5) NOT NULL,
+    comment TEXT,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (id)
+);
+
+the bacis data to insert
+INSERT INTO reviews (user_name, place_name, rating, comment) VALUES
+('Alice', 'Eiffel Tower', 5, 'Amazing view! Must visit.'),
+('Bob', 'Louvre Museum', 4, 'Incredible art, very crowded though.'),
+('Charlie', 'Notre-Dame Cathedral', 5, 'Historic and beautiful architecture.'),
+('Diana', 'Montmartre', 4, 'Charming streets and nice cafes.'),
+('Ethan', 'Sacré-Cœur', 5, 'Breathtaking panorama of Paris.');

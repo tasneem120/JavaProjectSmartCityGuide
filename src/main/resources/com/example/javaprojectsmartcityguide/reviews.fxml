@@ -4,8 +4,8 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
@@ -13,8 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="532.0" prefWidth="736.0" stylesheets="@CSS/reviewpadgestyle.css" type="BorderPane" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaprojectsmartcityguide.ReviewsController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="532.0" prefWidth="736.0" stylesheets="@CSS/reviewpadgestyle.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaprojectsmartcityguide.ReviewsController">
    <top>
       <HBox alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="600.0" style="-fx-background-color: #CCCCCC; -fx-padding: 10; -fx-spacing: 10;" BorderPane.alignment="CENTER">
          <children>
@@ -37,17 +36,65 @@
    <center>
       <ScrollPane prefHeight="218.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <content>
-            <VBox prefHeight="342.0" prefWidth="751.0" />
+            <VBox fx:id="reviewsContainer" prefHeight="197.0" prefWidth="699.0" />
          </content>
       </ScrollPane>
    </center>
    <bottom>
-      <VBox prefHeight="108.0" prefWidth="698.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="192.0" prefWidth="694.0" style="-fx-spacing: 5;" BorderPane.alignment="CENTER">
          <children>
-            <TextArea id="txtReview" prefHeight="50.0" promptText="Write your review" />
-            <Slider prefHeight="14.0" prefWidth="623.0" />
-            <Button mnemonicParsing="false" text="btnSubmitReview" />
+            <Label text="Add your reviews">
+               <font>
+                  <Font name="Bodoni MT" size="22.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="20.0" prefWidth="696.0" style="-fx-spacing: 10;">
+               <children>
+                  <Label text="User name">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField id="userNameField" fx:id="userNameField" prefHeight="26.0" prefWidth="214.0" promptText="Display name in the comment" />
+               </children>
+            </HBox>
+            <HBox prefHeight="20.0" prefWidth="696.0" style="-fx-spacing: 6;">
+               <children>
+                  <Label style="-fx-line-spacing: 10;" text="Place name">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField id="placeNameField" fx:id="placeNameField" prefHeight="26.0" prefWidth="214.0" promptText="Place you want to rate" />
+               </children>
+            </HBox>
+            <HBox prefHeight="20.0" prefWidth="696.0" style="-fx-spacing: 30;">
+               <children>
+                  <Label text="Rateing">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField id="ratingField" fx:id="ratingField" prefHeight="26.0" prefWidth="214.0" promptText="from 1-5" />
+               </children>
+            </HBox>
+            <HBox prefHeight="20.0" prefWidth="696.0" style="-fx-spacing: 15;">
+               <children>
+                  <Label text="Comment">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextArea id="commentField" fx:id="commentField" prefHeight="60.0" prefWidth="566.0" promptText="Enter your comment" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-spacing: 20;">
+               <children>
+                  <Button id="btnSubmitReview" mnemonicParsing="false" onAction="#handleSubmit" text="Submit" />
+                  <Button id="backBtn" mnemonicParsing="false" onAction="#backToWelcome" text=" Back to Welcome" />
+               </children>
+            </HBox>
          </children>
       </VBox>
    </bottom>
-</fx:root>
+</BorderPane>
