@@ -48,10 +48,10 @@ public class ViewVisitor implements Initializable {
 
         pageSelector.setOnAction(e -> openPlacesCard());
 
-        loadDataToUI();
+        //loadDataToUI();
     }
 
-    private List<Places> getData() {
+   /* private List<Places> getData() {
         List<Places> placesList = new ArrayList<>();
 
         for (int i = 0; i < 8; i++) {
@@ -97,7 +97,7 @@ public class ViewVisitor implements Initializable {
             e.printStackTrace();
         }
     }
-
+*/
     private void openPlacesCard() {
         try {
             FXMLLoader loader = new FXMLLoader(

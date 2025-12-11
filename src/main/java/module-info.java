@@ -14,5 +14,6 @@ module com.example.javaprojectsmartcityguide {
     requires java.desktop;
 
     opens com.example.javaprojectsmartcityguide to javafx.fxml;
+    opens com.example.javaprojectsmartcityguide.controller to javafx.fxml;
     exports com.example.javaprojectsmartcityguide;
 }

@@ -22,7 +22,7 @@
                         <Font name="Cambria" size="18.0" />
                      </font>
                      <HBox.margin>
-                        <Insets left="45.0" />
+                        <Insets left="45.0" top="10.0" />
                      </HBox.margin>
                   </Label>
                </children>
