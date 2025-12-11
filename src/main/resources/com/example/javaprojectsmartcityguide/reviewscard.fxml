@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.javaprojectsmartcityguide.ReviewItemController"
+      spacing="5" styleClass="review-card" style="-fx-padding: 10; -fx-background-color: #ffffff; -fx-border-radius: 5; -fx-background-radius: 5;">
+
+    <HBox spacing="10">
+        <Label fx:id="lblUsername" styleClass="user-name"/>
+        <Label fx:id="lblStars" styleClass="stars"/>
+    </HBox>
+
+    <Label fx:id="lblPlaceName" styleClass="place-name"/>
+    <Label fx:id="lblComment" styleClass="review-text" wrapText="true"/>
+</VBox>
+
