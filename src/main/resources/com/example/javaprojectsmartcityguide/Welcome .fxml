@@ -7,7 +7,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="530.0" prefWidth="750.0" style="-fx-background-color: #E5E5E5;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaprojectsmartcityguide.LoginController">
+<AnchorPane prefHeight="530.0" prefWidth="750.0" style="-fx-background-color: #E5E5E5;"
+            xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.javaprojectsmartcityguide.LoginController">
    <children>
       <Label layoutX="330.0" layoutY="-2.0" prefHeight="95.0" prefWidth="419.0" style="-fx-background-color: #CCCCCC;" styleClass="labelLogo" stylesheets="@CSS/Fonts.css" text="  City Explorer" textAlignment="JUSTIFY" textFill="#143261">
          <font>
@@ -27,7 +29,7 @@
          </font>
       </Button>
 
-      <Button layoutX="404.0" layoutY="321.0" mnemonicParsing="false" onAction="#openAdminLogin" prefHeight="43.0" prefWidth="184.0" style="-fx-background-color: #143261;" styleClass="buttonWelcom" stylesheets="@CSS/Fonts.css" text="Visitor" textFill="WHITE"> <!-- ربط الزرار بالميثود -->
+      <Button layoutX="404.0" layoutY="321.0" mnemonicParsing="false" onAction="#visitor" prefHeight="43.0" prefWidth="184.0" style="-fx-background-color: #143261;" styleClass="buttonWelcom" stylesheets="@CSS/Fonts.css" text="Visitor" textFill="WHITE"> <!-- ربط الزرار بالميثود -->
          <font>
             <Font name="Banyeh" size="12.0" />
          </font>

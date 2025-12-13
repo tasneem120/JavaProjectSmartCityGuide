@@ -21,6 +21,11 @@ public class LoginController {
         Stage stage = (Stage) ((Button)event.getSource()).getScene().getWindow();
         stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("login .fxml"))));
     }
+    @FXML
+    void visitor(ActionEvent event) throws IOException {
+        Stage stage = (Stage) ((Button)event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("View.fxml"))));
+    }
     //link with review padge
     @FXML private Button reviewsBtn;
 
@@ -80,9 +85,7 @@ public class LoginController {
             errorLabel.setVisible(true);
         }
     }
-    void visitor(ActionEvent event) {
-        try { openScene("user.fxml"); } catch(Exception e) { e.printStackTrace(); }//هنا همحط صفحه الزوار
-    }
+
 
     private void openScene(String fxml) throws Exception {
         Stage stage = (Stage) usernameField.getScene().getWindow();

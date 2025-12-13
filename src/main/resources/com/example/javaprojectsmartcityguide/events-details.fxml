@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="544.0" prefWidth="750.0" style="-fx-background-color: #E5E5E5;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaprojectsmartcityguide.detailsController">
+    <ImageView fx:id="eventImage" fitHeight="388.0" fitWidth="310.0" layoutX="21.0" layoutY="124.0" />
+
+    <Label fx:id="lblTitle" alignment="CENTER" contentDisplay="CENTER" layoutX="72.0" layoutY="48.0" prefHeight="47.0" prefWidth="582.0" style="-fx-font-size:22px; -fx-font-weight:bold;" textFill="#d3751e" />
+
+    <Label fx:id="lblDate" layoutX="388.0" layoutY="167.0" prefHeight="38.0" prefWidth="316.0" style="-fx-font-size:16px;" />
+
+    <Label fx:id="lblTime" layoutX="387.0" layoutY="222.0" prefHeight="38.0" prefWidth="301.0" style="-fx-font-size:16px;" />
+
+    <Label fx:id="lblDescription" layoutX="382.0" layoutY="266.0" prefHeight="230.0" prefWidth="327.0" wrapText="true">
+      <font>
+         <Font size="14.0" />
+      </font></Label>
+   <HBox layoutX="-1.0" prefHeight="38.0" prefWidth="796.0" style="-fx-background-color: #143261;">
+      <children>
+         <Label prefHeight="38.0" prefWidth="469.0" text="  Event Details" textFill="#fff7f7">
+            <font>
+               <Font name="MS UI Gothic" size="34.0" />
+            </font>
+         </Label>
+      </children>
+   </HBox>
+   <Label layoutX="348.0" layoutY="112.0" prefHeight="38.0" prefWidth="290.0" text="Event Overview : " textFill="#d3751e">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font>
+   </Label>
+   <Label layoutX="348.0" layoutY="167.0" prefHeight="32.0" prefWidth="30.0" text="  🗓" />
+   <Label layoutX="348.0" layoutY="225.0" prefHeight="32.0" prefWidth="30.0" text="  ⏰" />
+</AnchorPane>
