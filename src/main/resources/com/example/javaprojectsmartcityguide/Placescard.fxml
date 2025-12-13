@@ -4,105 +4,58 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="530.0" prefWidth="750.0" stylesheets="@CSS/PlacesCard.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaprojectsmartcityguide.controller.PlacesCard">
+<AnchorPane prefHeight="700.0" prefWidth="900.0" stylesheets="@CSS/PlacesCard.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaprojectsmartcityguide.controller.PlacesCard">
    <children>
       <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <left>
-            <VBox prefHeight="530.0" prefWidth="243.0" styleClass="right-bar" stylesheets="@CSS/PlacesCard.css" BorderPane.alignment="CENTER">
+            <VBox prefHeight="200.0" prefWidth="300.0" styleClass="right-bar" stylesheets="@CSS/PlacesCard.css" BorderPane.alignment="CENTER">
                <children>
-                  <HBox prefHeight="80.0" prefWidth="200.0">
+                  <HBox prefHeight="80.0" prefWidth="256.0">
                      <children>
-                        <Label alignment="CENTER" prefHeight="42.0" prefWidth="129.0" text="Places" textAlignment="CENTER" textFill="WHITE">
+                        <Label alignment="CENTER" prefHeight="42.0" prefWidth="129.0" text="Places" textAlignment="CENTER" textFill="#8a8787">
                            <font>
                               <Font name="Cambria Bold" size="33.0" />
                            </font>
                            <HBox.margin>
-                              <Insets left="50.0" top="50.0" />
+                              <Insets left="85.0" top="20.0" />
                            </HBox.margin>
                         </Label>
                      </children>
                   </HBox>
-                  <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="126.0" style="-fx-background-color: #143261;" styleClass="hand" stylesheets="@CSS/Fonts.css" text="Resturant" textFill="WHITE">
-                     <font>
-                        <Font name="Calibri Bold" size="15.0" />
-                     </font>
+                  <HBox prefHeight="50.0" prefWidth="160.0" stylesheets="@CSS/PlacesCard.css">
+                     <children>
+                        <TextField prefHeight="30.0" prefWidth="160.0" promptText="Type here to  search" styleClass="search-box" stylesheets="@CSS/PlacesCard.css">
+                           <HBox.margin>
+                              <Insets left="25.0" top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Cambria Bold" size="12.0" />
+                           </font>
+                        </TextField>
+                        <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" styleClass="search-button" stylesheets="@CSS/PlacesCard.css" text="Search" textFill="#ece7e7">
+                           <HBox.margin>
+                              <Insets top="12.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
                      <VBox.margin>
-                        <Insets left="15.0" top="15.0" />
+                        <Insets left="20.0" right="20.0" />
                      </VBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="126.0" style="-fx-background-color: #143261;" styleClass="hand" stylesheets="@CSS/Fonts.css" text="Hotels" textAlignment="CENTER" textFill="WHITE">
-                     <font>
-                        <Font name="Calibri Bold" size="15.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="15.0" top="15.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="144.0" style="-fx-background-color: #143261;" styleClass="hand" stylesheets="@CSS/Fonts.css" text="Entertainment" textFill="WHITE">
-                     <font>
-                        <Font name="Calibri Bold" size="15.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="15.0" top="15.0" />
-                     </VBox.margin>
-                  </Button>
+                     <styleClass>
+                        <String fx:value="search-box" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </HBox>
                </children>
             </VBox>
          </left>
-         <center>
-            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-               <children>
-                  <Button mnemonicParsing="false" onAction="#nextSlide" prefHeight="26.0" prefWidth="39.0" style="-fx-font-weight: bold; -fx-background-color: #143261;" styleClass="hand" stylesheets="@CSS/Fonts.css" text="&lt;" textFill="WHITE">
-                     <HBox.margin>
-                        <Insets top="250.0" />
-                     </HBox.margin>
-                  </Button>
-                  <TextArea fx:id="descriptionArea" prefHeight="534.0" prefWidth="242.0" style="-fx-text-fill: #143261;" styleClass="text-area" stylesheets="@CSS/PlacesCard.css">
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
-                     <font>
-                        <Font name="Cambria Bold" size="18.0" />
-                     </font>
-                  </TextArea>
-                  <AnchorPane prefHeight="493.0" prefWidth="228.0" stylesheets="@CSS/PlacesCard.css">
-                     <children>
-                        <VBox alignment="TOP_CENTER" layoutX="-1.0" layoutY="111.0" prefHeight="309.0" prefWidth="225.0" AnchorPane.bottomAnchor="110.59999999999997" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-1.4000000000000057" AnchorPane.topAnchor="111.0">
-                           <children>
-                              <HBox prefHeight="47.0" prefWidth="225.0" />
-                              <Label fx:id="namelable" alignment="CENTER" prefHeight="32.0" prefWidth="150.0" textFill="#143261">
-                                 <font>
-                                    <Font name="Cambria" size="18.0" />
-                                 </font>
-                              </Label>
-                              <ImageView fx:id="imageView" fitHeight="290.0" fitWidth="221.0" pickOnBounds="true" preserveRatio="true" />
-                           </children>
-                        </VBox>
-                     </children>
-                     <styleClass>
-                        <String fx:value="image-item" />
-                        <String fx:value="shadow" />
-                     </styleClass>
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
-                  </AnchorPane>
-                  <Button mnemonicParsing="false" onAction="#previousSlide" prefHeight="25.0" prefWidth="39.0" style="-fx-font-weight: bold; -fx-background-color: #143261; -fx-text-fill: white;" styleClass="hand" stylesheets="@CSS/Fonts.css" text="&gt;" textFill="#143261">
-                     <HBox.margin>
-                        <Insets top="250.0" />
-                     </HBox.margin>
-                  </Button>
-               </children>
-            </HBox>
-         </center>
       </BorderPane>
    </children>
 </AnchorPane>
