@@ -48,59 +48,62 @@ public class ViewVisitor implements Initializable {
 
         pageSelector.setOnAction(e -> openPlacesCard());
 
-      //  loadDataToUI();
+//        loadDataToUI();
     }
 
-   /* private List<Places> getData() {
-        List<Places> placesList = new ArrayList<>();
-
-        for (int i = 0; i < 8; i++) {
-            Places place = new Places(
-                    "Luxury Place " + (i + 1),
-                    "Perfect for your vacation",
-                    "/Images/hotel3.jpg"
-            );
-            placesList.add(place);
-        }
-        return placesList;
-    }
-
-    private void loadDataToUI() {
-        placeList.addAll(getData());
-        int column = 0;
-        int row = 0;
-
-        try {
-            for (int i = 0; i < placeList.size(); i++) {
-
-                FXMLLoader fxmlLoader = new FXMLLoader(
-                        getClass().getResource("/com/example/javaprojectsmartcityguide/items.fxml")
-                );
-
-                AnchorPane anchorPane = fxmlLoader.load();
-
-                Items items = fxmlLoader.getController();
-                items.setData(placeList.get(i));
-
-                if (column == 4) {
-                    column = 0;
-                    row++;
-                }
-
-                grid.add(anchorPane, column++, row);
-                GridPane.setMargin(anchorPane, new Insets(10));
-            }
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }*/
+//    private List<Places> getData() {
+//        List<Places> placesList = new ArrayList<>();
+//
+//        for (int i = 0; i < 8; i++) {
+//            Places place = new Places(
+//                    "Luxury Place " + (i + 1),
+//                    "Perfect for your vacation",
+//                    "/Images/hotel3.jpg"
+//            );
+//            placesList.add(place);
+//        }
+//        return placesList;
+//    }
+//
+//    private void loadDataToUI() {
+//        placeList.addAll(getData());
+//        int column = 0;
+//        int row = 0;
+//
+//        try {
+//            for (int i = 0; i < placeList.size(); i++) {
+//
+//                FXMLLoader fxmlLoader = new FXMLLoader(
+//                        getClass().getResource(
+//                                "/com/example/javaprojectsmartcityguide/items.fxml"
+//                        )
+//                );
+//
+//                AnchorPane anchorPane = fxmlLoader.load();
+//
+//                Items items = fxmlLoader.getController();
+//                items.setData(placeList.get(i));
+//
+//                if (column == 4) {
+//                    column = 0;
+//                    row++;
+//                }
+//
+//                grid.add(anchorPane, column++, row);
+//                GridPane.setMargin(anchorPane, new Insets(10));
+//            }
+//
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
     private void openPlacesCard() {
         try {
             FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource("/com/example/javaprojectsmartcityguide/PlacesCard.fxml")
-
+                    getClass().getResource(
+                            "/com/example/javaprojectsmartcityguide/PlacesCard.fxml"
+                    )
             );
 
             Parent root = loader.load();

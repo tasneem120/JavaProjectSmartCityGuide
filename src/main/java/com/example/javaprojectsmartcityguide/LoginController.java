@@ -1,5 +1,4 @@
-/*package com.example.javaprojectsmartcityguide;
-import com.example.javaprojectsmartcityguide.model.BDConnection;
+package com.example.javaprojectsmartcityguide;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -96,79 +95,4 @@ public class LoginController {
         a.show();
     }
 
-}*/
-package com.example.javaprojectsmartcityguide;
-
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
-import javafx.stage.Stage;
-
-import java.io.IOException;
-
-public class LoginController {
-
-    @FXML
-    private TextField usernameField;
-
-    @FXML
-    private PasswordField passwordField;
-
-    @FXML
-    void login(ActionEvent event) {
-        String username = usernameField.getText();
-        String password = passwordField.getText();
-
-        if (username.isEmpty() || password.isEmpty()) {
-            showAlert("Error", "Please fill all fields!");
-            return;
-        }
-
-        // ⚠️ حل مؤقت: بما إننا معندناش جدول users، هنعمل دخول ثابت
-        // اليوزر: admin والباسورد: 123
-        if (username.equals("admin") && password.equals("123")) {
-            openAdminPage(event);
-        } else {
-            showAlert("Error", "Wrong Username or Password!");
-        }
-    }
-
-    private void openAdminPage(ActionEvent event) {
-        try {
-            // تأكدي إن اسم ملف صفحة الإدمن صح (admin_view.fxml)
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("admin_view.fxml"));
-            Parent root = loader.load();
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(new Scene(root));
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    private void showAlert(String title, String content) {
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle(title);
-        alert.setContentText(content);
-        alert.show();
-    }
-
-    @FXML
-    void handleBack(ActionEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("hello-view.fxml"));
-            Parent root = loader.load();
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(new Scene(root));
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 }

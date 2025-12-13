@@ -1,7 +1,5 @@
 package com.example.javaprojectsmartcityguide;
 
-import com.example.javaprojectsmartcityguide.model.BDConnection;
-
 import java.sql.*;
 
 public class DBMethods {

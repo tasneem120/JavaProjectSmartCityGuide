@@ -1,6 +1,5 @@
 package com.example.javaprojectsmartcityguide;
 
-import com.example.javaprojectsmartcityguide.model.BDConnection;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
