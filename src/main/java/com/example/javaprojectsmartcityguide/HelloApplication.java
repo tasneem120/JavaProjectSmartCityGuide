@@ -16,7 +16,7 @@ public class HelloApplication extends Application {
 
         Parent root = FXMLLoader.load(getClass().getResource("welcome .fxml"));
         Scene scene = new Scene(root);
-        stage.setTitle("Smart City Guide");
+        stage.setTitle("City Explorer");
         stage.getIcons().add(new Image(getClass().getResourceAsStream("Images/logo.png")));
         stage.setScene(scene);
         stage.show();
@@ -34,6 +34,6 @@ launch(args);
 //        } catch (Exception e) {
 //            e.printStackTrace();
 //        }
-
+//
     }
 }

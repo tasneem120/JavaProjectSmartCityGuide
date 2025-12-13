@@ -1,122 +1,91 @@
 package com.example.javaprojectsmartcityguide.controller;
 
-import com.example.javaprojectsmartcityguide.model.Places;
+
+import com.example.javaprojectsmartcityguide.controller.PlacesCard;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.geometry.Insets;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.ScrollPane;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.ResourceBundle;
 
 public class ViewVisitor implements Initializable {
-
-    @FXML
-    private VBox ImageCard;
-
-    @FXML
-    private ScrollPane ScrollPane;
-
-    @FXML
-    private GridPane grid;
-
-    @FXML
-    private ComboBox<String> pageSelector;
-
-    private List<Places> placeList = new ArrayList<>();
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-
-
-        pageSelector.getItems().addAll(
-                "Restaurants & Coffee",
-                "Hotels",
-                "Public Services"
-        );
-
-        pageSelector.setOnAction(e -> openPlacesCard());
-
-//        loadDataToUI();
-    }
-
-//    private List<Places> getData() {
-//        List<Places> placesList = new ArrayList<>();
-//
-//        for (int i = 0; i < 8; i++) {
-//            Places place = new Places(
-//                    "Luxury Place " + (i + 1),
-//                    "Perfect for your vacation",
-//                    "/Images/hotel3.jpg"
-//            );
-//            placesList.add(place);
-//        }
-//        return placesList;
-//    }
-//
-//    private void loadDataToUI() {
-//        placeList.addAll(getData());
-//        int column = 0;
-//        int row = 0;
-//
-//        try {
-//            for (int i = 0; i < placeList.size(); i++) {
-//
-//                FXMLLoader fxmlLoader = new FXMLLoader(
-//                        getClass().getResource(
-//                                "/com/example/javaprojectsmartcityguide/items.fxml"
-//                        )
-//                );
-//
-//                AnchorPane anchorPane = fxmlLoader.load();
-//
-//                Items items = fxmlLoader.getController();
-//                items.setData(placeList.get(i));
-//
-//                if (column == 4) {
-//                    column = 0;
-//                    row++;
-//                }
-//
-//                grid.add(anchorPane, column++, row);
-//                GridPane.setMargin(anchorPane, new Insets(10));
-//            }
-//
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
-
-    private void openPlacesCard() {
+    @FXML private void openReviews(ActionEvent event) {
         try {
-            FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource(
-                            "/com/example/javaprojectsmartcityguide/PlacesCard.fxml"
-                    )
-            );
-
-            Parent root = loader.load();
-            Stage stage = new Stage();
-            stage.setTitle("Places");
-            stage.setScene(new Scene(root));
-            stage.show();
-
+            Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/com/example/javaprojectsmartcityguide/reviews.fxml"))));
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+    @FXML private void openEvents(ActionEvent event) {
+        try {
+            Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/com/example/javaprojectsmartcityguide/French Events.fxml"))));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    void backWelcome(ActionEvent event) throws IOException {
+        Stage stage = (Stage) ((Button)event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/com/example/javaprojectsmartcityguide/welcome .fxml"))));
+    }
+    @FXML
+    private ComboBox<String> pageSelector;
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+        pageSelector.getItems().addAll(
+                "Restaurants",
+                "Hotels",
+                "Entertainment"
+        );
+
+        pageSelector.setOnAction(e -> openPlacesCard());
+    }
+
+    private void openPlacesCard() {
+
+        String selectedCategory = pageSelector.getValue();
+        if (selectedCategory == null) return;
+
+        // 🔹 نحول اسم الكاتيجوري لاسم جدول
+        String tableName = switch (selectedCategory) {
+            case "Restaurants" -> "restaurants";
+            case "Hotels" -> "hotels";
+            case "Entertainment" -> "entertainment";
+            default -> null;
+        };
+
+        if (tableName == null) return;
+
+        try {
+            FXMLLoader loader = new FXMLLoader(
+                    getClass().getResource("/com/example/javaprojectsmartcityguide/PlacesCard.fxml")
+            );
+
+            Parent root = loader.load();
+
+            PlacesCard controller = loader.getController();
+            controller.loadPlacesFromTable(tableName);
+
+            Stage stage = new Stage();
+            stage.setTitle("Places - " + selectedCategory);
+            stage.setScene(new Scene(root));
+            stage.show();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 }
-
-
-

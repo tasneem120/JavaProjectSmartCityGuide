@@ -14,7 +14,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="530.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaprojectsmartcityguide.AdminController">
    <children>
       <HBox layoutX="10.0" layoutY="10.0" prefHeight="34.0" spacing="10.0" />
@@ -40,13 +39,13 @@
                </font>
             </Label>
             <ComboBox fx:id="categoryBox" maxWidth="1.7976931348623157E308" prefHeight="26.0" prefWidth="270.0" />
-            <Label text="Location" textFill="#143261">
+            <Label text="Description" textFill="#143261">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
             <TextField fx:id="locationField" />
-            <Label text="Price" textFill="#143261">
+            <Label prefHeight="20.0" prefWidth="83.0" text="Image_URL" textFill="#143261">
                <font>
                   <Font size="14.0" />
                </font>
@@ -54,23 +53,24 @@
             <TextField fx:id="priceField" />
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
                <children>
-                  <Button fx:id="addButton" mnemonicParsing="false" prefWidth="60.0" style="-fx-background-color: #143261;" text="Add" textFill="#fafbfc">
+                  <Button fx:id="addButton" mnemonicParsing="false" onAction="#addPlace" prefWidth="60.0" style="-fx-background-color: #143261;" text="Add" textFill="#fafbfc">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="updateButton" mnemonicParsing="false" prefWidth="60.0" style="-fx-background-color: #f39c12;;" text="Update" textFill="#fafbfc">
+                  <Button fx:id="updateButton" mnemonicParsing="false" onAction="#updatePlace" prefWidth="60.0" style="-fx-background-color: #f39c12;;" text="Update" textFill="#fafbfc">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="deleteButton" mnemonicParsing="false" prefWidth="60.0" style="-fx-background-color: #e74c3c;;" text="Delete" textFill="#fafbfc">
+                  <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deletePlace" prefWidth="60.0" style="-fx-background-color: #e74c3c;;" text="Delete" textFill="#fafbfc">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
                </children>
             </HBox>
+            <Button mnemonicParsing="false" onAction="#backWelcome" style="-fx-background-color: #143261;" styleClass="hand" stylesheets="@CSS/Fonts.css" text="🏠" textFill="WHITE" />
          </children>
          <effect>
             <DropShadow />

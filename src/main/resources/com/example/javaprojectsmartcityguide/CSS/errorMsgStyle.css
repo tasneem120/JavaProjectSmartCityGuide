@@ -1,0 +1,20 @@
+.alert {
+    -fx-border-color: #3498db; /* لون إطار الرسالة */
+    -fx-border-radius: 10;    /* حدود مستديرة */
+    -fx-background-color: #ecf0f1; /* لون الخلفية */
+    -fx-font-family: "Arial"; /* تغيير الخط */
+    -fx-font-size: 14px; /* حجم النص */
+    -fx-background-color: #143261;
+}
+
+.dialog-pane {
+    -fx-border-color: #3498db; /* إطار حول الرسالة */
+    -fx-border-radius: 8;    /* الحدود المستديرة */
+    -fx-background-color: #ecf0f1; /* الخلفية */
+}
+
+.button {
+    -fx-background-color: #e74c3c; /* لون زر الإغلاق */
+    -fx-text-fill: #ffffff; /* لون النص في الزر */
+    -fx-cursor: hand;
+}
