@@ -23,6 +23,6 @@ public class Items {
         Image image = new Image(
                 getClass().getResourceAsStream(placeList.getImageUrl())
         );
-        img.setImage(image);
+        img.setImage(imag);
     }
 }
