@@ -1,6 +1,6 @@
 package com.example.javaprojectsmartcityguide.controller;
 
-import com.example.javaprojectsmartcityguide.DBconnection;
+import com.example.javaprojectsmartcityguide.BDConnection;
 import com.example.javaprojectsmartcityguide.model.Places;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -33,7 +33,7 @@ public class PlacesCard {
     // 🔹 تحميل من جدول حسب الكاتيجوري
     public void loadPlacesFromTable(String tableName) throws SQLException, ClassNotFoundException {
 
-        Connection conn = DBconnection.getConnection();
+        Connection conn = BDConnection.getConnection();
         if (conn == null) {
             System.out.println("DB connection failed");
             return;
