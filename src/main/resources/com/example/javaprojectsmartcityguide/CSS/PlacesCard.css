@@ -24,3 +24,8 @@
     -fx-background-color: #557485;
     -fx-background-radius: 30;
 }
+.text-area{
+
+        -fx-text-alignment: left;
+        -fx-padding: 15px;
+}
