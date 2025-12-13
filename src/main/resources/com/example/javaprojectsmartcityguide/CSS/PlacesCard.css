@@ -11,7 +11,7 @@
     -fx-background-radius: 30;
 }
 .right-bar{
-    -fx-background-color: #213d4e;
+    -fx-background-color: #143261;
 }
 .shadow{
     -fx-effect: dropShadow(three-pass-box, rgb(87, 86, 86),6.0,0.0,0.0,6.0);

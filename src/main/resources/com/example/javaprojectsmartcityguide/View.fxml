@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.String?>
+<?import java.net.URL?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
@@ -19,69 +21,75 @@
 
 <BorderPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #F8F8FF;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaprojectsmartcityguide.controller.ViewVisitor">
 
-    <top>
-        <HBox alignment="CENTER_LEFT" prefHeight="40.0" style="-fx-background-color: #213d4e; -fx-border-color: #293053; -fx-border-width: 0 0 1 0;">
+    <left>
+        <VBox alignment="TOP_LEFT" prefWidth="180.0" spacing="10.0" style="-fx-background-color: #143261;">
             <padding>
-                <Insets left="20.0" />
+                <Insets bottom="10.0" left="15.0" right="15.0" top="30.0" />
             </padding>
-            <Label style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #ffffff;" text="VisitorViews">
+            <Label prefHeight="48.0" prefWidth="129.0" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #ffffff;" text="VisitorViews" textFill="WHITE">
                 <graphic>
                     <ImageView fitHeight="20.0" fitWidth="20.0" preserveRatio="true" />
                 </graphic>
             </Label>
-        </HBox>
-    </top>
 
-    <left>
-        <VBox alignment="TOP_LEFT" prefWidth="180.0" spacing="10.0" style="-fx-background-color: #213d4e;">
-            <padding>
-                <Insets bottom="10.0" left="15.0" right="15.0" top="30.0" />
-            </padding>
-
-            <HBox alignment="CENTER_LEFT" style="-fx-background-color: #213643; -fx-background-radius: 5; -fx-padding: 8;">
+            <HBox alignment="CENTER_LEFT" style="-fx-background-color: #143261; -fx-background-radius: 5; -fx-padding: 8;">
                 <ImageView fitHeight="16.0" fitWidth="16.0" preserveRatio="true" />
-                <Label style="-fx-text-fill: white; -fx-font-weight: bold;" text="Places">
-                    <HBox.margin>
-                        <Insets left="10.0" />
-                    </HBox.margin>
-                </Label>
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="115.0" style="-fx-background-color: #0f1b2f;" styleClass="hand" stylesheets="@CSS/Fonts.css" text="Places" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Button>
             </HBox>
 
             <HBox alignment="CENTER_LEFT" style="-fx-padding: 8;">
                 <ImageView fitHeight="16.0" fitWidth="16.0" preserveRatio="true" />
-                <Label style="-fx-text-fill: #D3D3D3;" text="Review">
-                    <HBox.margin>
-                        <Insets left="10.0" />
-                    </HBox.margin>
-                </Label>
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="115.0" style="-fx-background-color: #0f1b2f;" styleClass="hand" stylesheets="@CSS/Fonts.css" text="Reviwes" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Button>
             </HBox>
             <HBox alignment="CENTER_LEFT" style="-fx-padding: 8;">
                 <ImageView fitHeight="16.0" fitWidth="16.0" preserveRatio="true" />
-                <Label style="-fx-text-fill: #D3D3D3;" text="Events">
-                    <HBox.margin>
-                        <Insets left="10.0" />
-                    </HBox.margin>
-                </Label>
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="115.0" style="-fx-background-color: #0f1b2f;" styleClass="hand" stylesheets="@CSS/Fonts.css" text="Events" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Button>
             </HBox>
+         <Button mnemonicParsing="false" style="-fx-background-color: white;" styleClass="hand" stylesheets="@CSS/Fonts.css"  text="🏠 " textFill="#143261" />
         </VBox>
     </left>
 
     <center>
-        <StackPane style="-fx-padding: 20;">
+        <StackPane prefHeight="586.0" prefWidth="717.0" style="-fx-padding: 20;">
             <VBox fx:id="ImageCard" style="-fx-background-color: white; -fx-border-radius: 5; -fx-background-radius: 5; -fx-border-color: #E0E0E0; -fx-border-width: 1;">
 
                 <HBox alignment="CENTER_LEFT" style="-fx-padding: 10 20 0 20; -fx-background-color: #FFFFFF;">
-                    <Label style="-fx-font-weight: bold; -fx-padding: 5 10 5 10; -fx-border-width: 0 0 2 0; -fx-border-color: #213d4e; -fx-text-fill: #213d4e;" text="Members" />
+                    <Label style="-fx-font-weight: bold; -fx-padding: 5 10 5 10; -fx-border-width: 0 0 2 0; -fx-border-color: #213d4e; -fx-text-fill: #213d4e;" text="Members" textFill="#143261" />
                 </HBox>
 
-                <HBox alignment="CENTER_LEFT" spacing="10.0" style="-fx-padding: 15 20 15 20; -fx-background-color: #F7F7F7; -fx-border-color: #E0E0E0; -fx-border-width: 0 0 1 0;">
-               <ComboBox fx:id="pageSelector" prefHeight="25.0" prefWidth="106.0" promptText="Choose" styleClass="combo-box" stylesheets="@CSS/PlacesCard.css" />
+                <HBox alignment="CENTER_LEFT" prefHeight="57.0" prefWidth="675.0" spacing="10.0" style="-fx-padding: 15 20 15 20; -fx-background-color: #F7F7F7; -fx-border-color: #E0E0E0; -fx-border-width: 0 0 1 0;">
+               <ComboBox fx:id="pageSelector" prefHeight="25.0" prefWidth="106.0" promptText="Choose" style="-fx-text-fill: white; -fx-background-color: #143261;" styleClass="hand">
+                  <stylesheets>
+                     <URL value="@CSS/PlacesCard.css" />
+                     <URL value="@CSS/Fonts.css" />
+                  </stylesheets></ComboBox>
                <VBox.margin>
                   <Insets />
                </VBox.margin>
                 </HBox>
 
-                <AnchorPane style="-fx-padding: 10 20 20 20;" VBox.vgrow="ALWAYS">
+                <AnchorPane prefHeight="373.0" prefWidth="610.0" style="-fx-padding: 10 20 20 20;" VBox.vgrow="ALWAYS">
                <children>
                   <HBox layoutX="30.0" layoutY="14.0" prefHeight="424.0" prefWidth="652.0">
                      <children>
@@ -98,7 +106,7 @@
                                              <children>
                                                 <HBox prefHeight="47.0" prefWidth="225.0">
                                                    <children>
-                                                      <Label fx:id="namelable" alignment="CENTER" prefHeight="27.0" prefWidth="148.0" text="Hotel Ritz">
+                                                      <Label fx:id="namelable" alignment="CENTER" prefHeight="27.0" prefWidth="148.0" text="Hotel Ritz" textFill="#143261">
                                                          <font>
                                                             <Font name="Cambria" size="18.0" />
                                                          </font>
@@ -148,7 +156,7 @@
                                              <children>
                                                 <HBox prefHeight="47.0" prefWidth="225.0">
                                                    <children>
-                                                      <Label fx:id="namelable1" alignment="CENTER" prefHeight="27.0" prefWidth="111.0" text="Le Jules">
+                                                      <Label fx:id="namelable1" alignment="CENTER" prefHeight="27.0" prefWidth="111.0" text="Le Jules" textFill="#143261">
                                                          <font>
                                                             <Font name="Cambria" size="18.0" />
                                                          </font>
@@ -195,7 +203,7 @@
                                              <children>
                                                 <HBox prefHeight="47.0" prefWidth="225.0">
                                                    <children>
-                                                      <Label fx:id="namelable2" alignment="CENTER" prefHeight="27.0" prefWidth="127.0" text="Shangri-La">
+                                                      <Label fx:id="namelable2" alignment="CENTER" prefHeight="27.0" prefWidth="127.0" text="Shangri-La" textFill="#143261">
                                                          <font>
                                                             <Font name="Cambria" size="18.0" />
                                                          </font>
@@ -238,7 +246,7 @@
                                              <children>
                                                 <HBox prefHeight="47.0" prefWidth="225.0">
                                                    <children>
-                                                      <Label fx:id="namelable3" alignment="CENTER" prefHeight="27.0" prefWidth="126.0" text="Disneyland">
+                                                      <Label fx:id="namelable3" alignment="CENTER" prefHeight="27.0" prefWidth="126.0" text="Disneyland" textFill="#143261">
                                                          <font>
                                                             <Font name="Cambria" size="18.0" />
                                                          </font>
@@ -285,7 +293,7 @@
                                              <children>
                                                 <HBox prefHeight="47.0" prefWidth="225.0">
                                                    <children>
-                                                      <Label fx:id="namelable21" alignment="CENTER" prefHeight="27.0" prefWidth="165.0" text="Louvre Museum">
+                                                      <Label fx:id="namelable21" alignment="CENTER" prefHeight="27.0" prefWidth="165.0" text="Louvre Museum" textFill="#143261">
                                                          <font>
                                                             <Font name="Cambria" size="18.0" />
                                                          </font>
@@ -328,7 +336,7 @@
                                              <children>
                                                 <HBox prefHeight="47.0" prefWidth="225.0">
                                                    <children>
-                                                      <Label fx:id="namelable31" alignment="CENTER" prefHeight="27.0" prefWidth="154.0" text="Café de Flore">
+                                                      <Label fx:id="namelable31" alignment="CENTER" prefHeight="27.0" prefWidth="154.0" text="Café de Flore" textFill="#143261">
                                                          <font>
                                                             <Font name="Cambria" size="18.0" />
                                                          </font>
@@ -375,7 +383,7 @@
                                              <children>
                                                 <HBox prefHeight="47.0" prefWidth="225.0">
                                                    <children>
-                                                      <Label fx:id="namelable22" alignment="CENTER" prefHeight="26.0" prefWidth="77.0" text="Bateaux">
+                                                      <Label fx:id="namelable22" alignment="CENTER" prefHeight="26.0" prefWidth="77.0" text="Bateaux" textFill="#143261">
                                                          <font>
                                                             <Font name="Cambria" size="18.0" />
                                                          </font>
@@ -418,7 +426,7 @@
                                              <children>
                                                 <HBox prefHeight="47.0" prefWidth="225.0">
                                                    <children>
-                                                      <Label fx:id="namelable32" alignment="CENTER" prefHeight="26.0" prefWidth="95.0" text="Telescope">
+                                                      <Label fx:id="namelable32" alignment="CENTER" prefHeight="26.0" prefWidth="95.0" text="Telescope" textFill="#143261">
                                                          <font>
                                                             <Font name="Cambria" size="18.0" />
                                                          </font>

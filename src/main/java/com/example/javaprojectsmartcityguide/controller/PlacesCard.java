@@ -1,6 +1,6 @@
 package com.example.javaprojectsmartcityguide.controller;
 
-import com.example.javaprojectsmartcityguide.DBconnection;
+import com.example.javaprojectsmartcityguide.BDConnection;
 import com.example.javaprojectsmartcityguide.model.Places;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -12,6 +12,7 @@ import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,9 +31,9 @@ public class PlacesCard {
     private int currentIndex = 0;
 
     // 🔹 تحميل من جدول حسب الكاتيجوري
-    public void loadPlacesFromTable(String tableName) {
+    public void loadPlacesFromTable(String tableName) throws SQLException, ClassNotFoundException {
 
-        Connection conn = DBconnection.getConnection();
+        Connection conn = BDConnection.getConnection();
         if (conn == null) {
             System.out.println("DB connection failed");
             return;
@@ -75,14 +76,12 @@ public class PlacesCard {
         Places place = placesList.get(currentIndex);
 
         namelable.setText(place.getName());
-
         descriptionArea.setWrapText(true);
         descriptionArea.setText(place.getDescription());
 
-        String imagePath =
-                "/com/example/javaprojectsmartcityguide/Images/"
-                        + place.getImageUrl();
-
+        // تعديل المسار للتأكد أنه صحيح
+        String imagePath = "/com/example/javaprojectsmartcityguide/" + place.getImageUrl();
+//        System.out.println(imagePath);
         InputStream stream = getClass().getResourceAsStream(imagePath);
 
         if (stream == null) {
