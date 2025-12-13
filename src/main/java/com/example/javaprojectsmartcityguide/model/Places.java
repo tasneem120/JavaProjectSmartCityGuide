@@ -1,24 +1,39 @@
 package com.example.javaprojectsmartcityguide.model;
 
 public class Places {
-    private int id;
     private String name;
     private String description;
-    private String imageUrl;   // matches database name image_url
+    private String imgSrc;
 
-    public Places(int id, String name, String description, String imageUrl) {
-        this.id = id;
+
+    public Places(String name, String description, String imgSrc) {
         this.name = name;
         this.description = description;
-        this.imageUrl = imageUrl;
+        this.imgSrc = imgSrc;
     }
 
-    public int getId() { return id; }
-    public String getName() { return name; }
-    public String getDescription() { return description; }
-    public String getImageUrl() { return imageUrl; }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public Places() {}
+
+
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getImgSrc() {
+        return imgSrc;
+    }
+    public void setImgSrc(String imgSrc) {
+        this.imgSrc = imgSrc;
     }
 }

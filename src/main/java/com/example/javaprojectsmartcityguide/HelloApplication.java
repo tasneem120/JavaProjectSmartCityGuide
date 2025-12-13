@@ -14,7 +14,7 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
 
-        Parent root = FXMLLoader.load(getClass().getResource("Welcome .fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("welcome .fxml"));
         Scene scene = new Scene(root);
         stage.setTitle("Smart City Guide");
         stage.getIcons().add(new Image(getClass().getResourceAsStream("Images/logo.png")));

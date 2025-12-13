@@ -21,7 +21,7 @@ public class Items {
         namelable.setText(placeList.getName());
 
         Image image = new Image(
-                getClass().getResourceAsStream(placeList.getImageUrl())
+                getClass().getResourceAsStream(placeList.getImgSrc())
         );
         img.setImage(imag);
     }

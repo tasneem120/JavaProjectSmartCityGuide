@@ -32,9 +32,6 @@
     -fx-background-radius: 18;
         -fx-cursor: hand;
 }
-.hand{
-    -fx-cursor: hand;
-}
 .buttonWelcom:pressed {
     -fx-cursor: closed-hand;
 }
