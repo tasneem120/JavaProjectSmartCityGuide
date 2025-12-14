@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.String?>
-<?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
@@ -46,7 +45,7 @@
 
             <HBox alignment="CENTER_LEFT" style="-fx-padding: 8;">
                 <ImageView fitHeight="16.0" fitWidth="16.0" preserveRatio="true" />
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="115.0" style="-fx-background-color: #0f1b2f;" styleClass="hand" onAction="#openReviews" stylesheets="@CSS/Fonts.css" text="Reviwes" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#openReviews" prefHeight="35.0" prefWidth="115.0" style="-fx-background-color: #0f1b2f;" styleClass="hand" stylesheets="@CSS/Fonts.css" text="Reviwes" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -57,7 +56,7 @@
             </HBox>
             <HBox alignment="CENTER_LEFT" style="-fx-padding: 8;">
                 <ImageView fitHeight="16.0" fitWidth="16.0" preserveRatio="true" />
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="115.0" style="-fx-background-color: #0f1b2f;" styleClass="hand" onAction="#openEvents" stylesheets="@CSS/Fonts.css" text="Events" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#openEvents" prefHeight="35.0" prefWidth="115.0" style="-fx-background-color: #0f1b2f;" styleClass="hand" stylesheets="@CSS/Fonts.css" text="Events" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -66,7 +65,18 @@
                </HBox.margin>
             </Button>
             </HBox>
-         <Button mnemonicParsing="false" style="-fx-background-color: white;" styleClass="hand" stylesheets="@CSS/Fonts.css" onAction="#backWelcome"  text="🏠 " textFill="#143261" />
+         <HBox prefHeight="100.0" prefWidth="200.0">
+            <VBox.margin>
+               <Insets top="250.0" />
+            </VBox.margin>
+            <children>
+               <Button mnemonicParsing="false" onAction="#backWelcome" style="-fx-background-color: white;" styleClass="hand" stylesheets="@CSS/Fonts.css" text="🏠 " textFill="#143261">
+                  <HBox.margin>
+                     <Insets top="70.0" />
+                  </HBox.margin>
+               </Button>
+            </children>
+         </HBox>
         </VBox>
     </left>
 
@@ -79,11 +89,7 @@
                 </HBox>
 
                 <HBox alignment="CENTER_LEFT" prefHeight="57.0" prefWidth="675.0" spacing="10.0" style="-fx-padding: 15 20 15 20; -fx-background-color: #F7F7F7; -fx-border-color: #E0E0E0; -fx-border-width: 0 0 1 0;">
-               <ComboBox fx:id="pageSelector" prefHeight="25.0" prefWidth="106.0" promptText="Choose" style="-fx-text-fill: white; -fx-background-color: #143261;" styleClass="hand">
-                  <stylesheets>
-                     <URL value="@CSS/PlacesCard.css" />
-                     <URL value="@CSS/Fonts.css" />
-                  </stylesheets></ComboBox>
+               <ComboBox fx:id="pageSelector" prefHeight="25.0" prefWidth="104.0" promptText="Choose" style="-fx-fill: #FFFFFF; -fx-border-radius: 50; -fx-background-color: #cccccc;" />
                <VBox.margin>
                   <Insets />
                </VBox.margin>

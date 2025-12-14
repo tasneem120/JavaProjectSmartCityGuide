@@ -100,3 +100,8 @@
 .review-text {
     -fx-wrap-text: true;
 }
+.combo-box{
+    -fx-background-color:  #143261;
+    -fx-text-fill: #ffffff;
+    -fx-border-radius: 30;
+}
