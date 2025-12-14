@@ -38,8 +38,7 @@ public class AdminController implements Initializable {
     @FXML private TableColumn<Place, String> colName;
     @FXML private TableColumn<Place, String> colCategory;
     @FXML private TableColumn<Place, String> colLocation;
-    @FXML private TableColumn<Place, Double> colPrice;
-    @FXML private TableColumn<Place, Integer> colRating;
+
 
     private ObservableList<Place> placeList = FXCollections.observableArrayList();
 
@@ -65,8 +64,7 @@ public class AdminController implements Initializable {
         colName.setCellValueFactory(new PropertyValueFactory<>("name"));
         colCategory.setCellValueFactory(new PropertyValueFactory<>("category"));
         colLocation.setCellValueFactory(new PropertyValueFactory<>("location"));
-        colPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
-        colRating.setCellValueFactory(new PropertyValueFactory<>("rating"));
+
 
         // إضافة الكاتجوري إلى القائمة المنسدلة
         categoryBox.getItems().addAll("Restaurants", "Hotels", "Entertainment");

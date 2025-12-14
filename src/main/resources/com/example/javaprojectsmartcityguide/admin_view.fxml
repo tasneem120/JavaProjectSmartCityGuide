@@ -81,11 +81,10 @@
             <TextField fx:id="searchField" promptText="Search by name..." />
             <TableView fx:id="placesTable" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
               <columns>
-                <TableColumn fx:id="colName" prefWidth="75.0" text="Name" />
-                <TableColumn fx:id="colCategory" prefWidth="75.0" text="Category" />
-                  <TableColumn fx:id="colLocation" prefWidth="75.0" text="Location" />
-                  <TableColumn fx:id="colPrice" prefWidth="75.0" text="Price" />
-                  <TableColumn fx:id="colRating" prefWidth="75.0" text="Rating" />
+                <TableColumn fx:id="colName" prefWidth="130.4000244140625" text="Name" />
+                <TableColumn fx:id="colCategory" prefWidth="104.79998779296875" text="Category" />
+                  <TableColumn fx:id="colLocation" prefWidth="184.0" text="Description" />
+
               </columns>
             </TableView>
          </children>

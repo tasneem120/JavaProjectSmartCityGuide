@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class LoginController {
 
@@ -62,27 +63,40 @@ public class LoginController {
             errorLabel.setText("");
         }
         try {
-            Connection conn =BDConnection.getConnection();
+            Connection conn = BDConnection.getConnection();
+
             String sql = "SELECT role FROM users WHERE username=? AND password=?";
             PreparedStatement ps = conn.prepareStatement(sql);
             ps.setString(1, username);
             ps.setString(2, password);
+
             ResultSet rs = ps.executeQuery();
-            if(rs.next()) {
+
+            if (rs.next()) {
                 String role = rs.getString("role");
-                if(role.equals("Admin")) openScene("admin_view.fxml");//هنا صفحه الادمن الي هتفتح لما تتحط
-                else {
+
+                if ("Admin".equals(role)) {
+                    openScene("admin_view.fxml");
+                } else {
                     errorLabel.setText("You do not have Admin access!");
                     errorLabel.setVisible(true);
                 }
             } else {
-                    errorLabel.setText("Invalid username or password!");
-                    errorLabel.setVisible(true);
+                errorLabel.setText("Invalid username or password!");
+                errorLabel.setVisible(true);
             }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            errorLabel.setText("Database error!");
+            errorLabel.setVisible(true);
+
         } catch (Exception e) {
-            errorLabel.setText("Database connection error!");
+            e.printStackTrace();
+            errorLabel.setText("UI / Scene loading error!");
             errorLabel.setVisible(true);
         }
+
     }
 
 
