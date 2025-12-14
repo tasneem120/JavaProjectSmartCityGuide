@@ -22,7 +22,7 @@ public class PlacesCard {
     private Label namelable;
 
     @FXML
-    private TextArea descriptionArea;
+    private Label descriptionArea;
 
     @FXML
     private ImageView imageView;

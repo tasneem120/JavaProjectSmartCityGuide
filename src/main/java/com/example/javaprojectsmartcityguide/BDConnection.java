@@ -7,9 +7,9 @@ import java.sql.SQLException;
 public class BDConnection {
     public static Connection getConnection() throws ClassNotFoundException, SQLException {
         try {
-            String url = "jdbc:mysql://localhost:3306/smartcitydatabase";
+            String url = "jdbc:mysql://localhost:3306/smartcityguide";
             String username = "root";
-            String password = "1234";
+            String password = "";
             return DriverManager.getConnection(url, username, password);
         } catch (Exception e) {
             e.printStackTrace();

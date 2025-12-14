@@ -78,7 +78,6 @@
       </VBox>
       <VBox layoutX="320.0" layoutY="50.0" prefHeight="480.0" prefWidth="420.0" spacing="10.0" style="-fx-background-color: #e0e0e0;">
          <children>
-            <TextField fx:id="searchField" promptText="Search by name..." />
             <TableView fx:id="placesTable" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
               <columns>
                 <TableColumn fx:id="colName" prefWidth="130.4000244140625" text="Name" />

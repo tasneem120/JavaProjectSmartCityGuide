@@ -14,10 +14,10 @@
     -fx-background-color: #143261;
 }
 .shadow{
-    -fx-effect: dropShadow(three-pass-box, rgb(204, 203, 203),6.0,0.0,0.0,6.0);
+    /*-fx-effect: dropShadow(three-pass-box, rgb(204, 203, 203),6.0,0.0,0.0,6.0);*/
 }
 .image-item{
-    -fx-background-color: #FFFFFF;
+    -fx-background-color: #E5E5E5;
     -fx-background-radius: 30;
 }
 .combo-box{
@@ -28,4 +28,13 @@
 .image{
     -fx-background-radius: 30;
     -fx-border-radius: 30;
+}
+.text-area {
+    /*-fx-background-radius: 10;*/
+    -fx-font-size: 20px;
+    -fx-alignment: center;
+    -fx-text-fill: #143261;
+
+
+    /*-fx-padding: 15;*/
 }

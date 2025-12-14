@@ -5,12 +5,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import javafx.scene.image.Image;
 import javafx.scene.control.DatePicker;
 import javafx.event.ActionEvent;
+
+import java.io.IOException;
 
 public class eventsController {
 
@@ -138,6 +141,11 @@ public class eventsController {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+    }
+    @FXML
+    void backWelcome(ActionEvent event) throws IOException {
+        Stage stage = (Stage) ((Button)event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("welcome .fxml"))));
     }
 }
 

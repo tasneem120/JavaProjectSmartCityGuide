@@ -25,7 +25,7 @@
             <padding>
                 <Insets bottom="10.0" left="15.0" right="15.0" top="30.0" />
             </padding>
-            <Label prefHeight="48.0" prefWidth="129.0" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #ffffff;" text="VisitorViews" textFill="WHITE">
+            <Label prefHeight="48.0" prefWidth="129.0" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #ffffff;" text="TravelMate " textFill="WHITE">
                 <graphic>
                     <ImageView fitHeight="20.0" fitWidth="20.0" preserveRatio="true" />
                 </graphic>
@@ -70,10 +70,13 @@
                <Insets top="250.0" />
             </VBox.margin>
             <children>
-               <Button mnemonicParsing="false" onAction="#backWelcome" style="-fx-background-color: white;" styleClass="hand" stylesheets="@CSS/Fonts.css" text="🏠 " textFill="#143261">
+               <Button mnemonicParsing="false" onAction="#backWelcome" prefHeight="31.0" prefWidth="46.0" style="-fx-background-color: white;" styleClass="hand" stylesheets="@CSS/Fonts.css" text="🏠 " textFill="#143261">
                   <HBox.margin>
-                     <Insets top="70.0" />
+                     <Insets top="50.0" />
                   </HBox.margin>
+                  <font>
+                     <Font name="System Bold" size="15.0" />
+                  </font>
                </Button>
             </children>
          </HBox>
@@ -89,7 +92,7 @@
                 </HBox>
 
                 <HBox alignment="CENTER_LEFT" prefHeight="57.0" prefWidth="675.0" spacing="10.0" style="-fx-padding: 15 20 15 20; -fx-background-color: #F7F7F7; -fx-border-color: #E0E0E0; -fx-border-width: 0 0 1 0;">
-               <ComboBox fx:id="pageSelector" prefHeight="25.0" prefWidth="104.0" promptText="Choose" style="-fx-fill: #FFFFFF; -fx-border-radius: 50; -fx-background-color: #cccccc;" />
+               <ComboBox fx:id="pageSelector" prefHeight="26.0" prefWidth="128.0" promptText="Choose" style="-fx-fill: #FFFFFF; -fx-border-radius: 50; -fx-background-color: #E5E5E5;" />
                <VBox.margin>
                   <Insets />
                </VBox.margin>
